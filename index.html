@@ -17,6 +17,7 @@
   </head>
   <body>
     <header>
+      <canvas id="logo" width="120" height="120"> Helen Tamene logo </canvas>
       <h1>Helen Tamene</h1>
       <img
         src="images/profile.jpg"
@@ -550,5 +551,26 @@ int main() {
     <footer>
       <p>&copy; 2026 Helen Tamene. All rights reserved.</p>
     </footer>
+    <script>
+      const canvas = document.getElementById("logo");
+      const ctx = canvas.getContext("2d");
+
+      // Blue square background
+      ctx.fillStyle = "#1f5fa8";
+      ctx.fillRect(0, 0, 120, 120);
+
+      // White circle
+      ctx.beginPath();
+      ctx.arc(60, 60, 45, 0, 2 * Math.PI);
+      ctx.fillStyle = "white";
+      ctx.fill();
+
+      // My initials
+      ctx.fillStyle = "#1f5fa8";
+      ctx.font = "bold 36px Arial";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText("HT", 60, 62);
+    </script>
   </body>
 </html>
